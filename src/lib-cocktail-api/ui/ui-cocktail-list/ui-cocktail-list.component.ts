@@ -10,8 +10,10 @@ import { CocktailsDTO } from '../../models/DTOs/CocktailslDTO';
   imports: [CommonModule, MatListModule],
 })
 export class UiCocktailListComponent implements OnInit {
+  _cocktais: CocktailsDTO[] = [];
+  
   @Input() set cocktais(cocktais: CocktailsDTO[]) {
-    console.log(cocktais);
+    this._cocktais = cocktais.filter(({ idDrink }) => idDrink === '11007');
   }
   constructor() {}
 
