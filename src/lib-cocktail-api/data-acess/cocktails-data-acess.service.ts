@@ -1,17 +1,15 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Injectable, Type } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Cocktails } from '../models/DTOs/CocktailslDTO';
+import { CocktailsDTO } from '../models/DTOs/CocktailslDTO';
 
 @Injectable()
-export class CocktailsServiceService {
+export class CocktailsService {
   constructor(private http: HttpClient) {}
 
-  public getCocktaislMargarita(
-    request: string
-  ): Observable<{ drinks: Cocktails[] }> {
+  public getCocktaislMargarita(): Observable<{ drinks: CocktailsDTO[] }> {
     const params = new HttpParams().set('s', 'margarita');
-    return this.http.get<{ drinks: Cocktails[] }>(
+    return this.http.get<{ drinks: CocktailsDTO[] }>(
       'https://www.thecocktaildb.com/api/json/v1/1/search.php',
       { params }
     );

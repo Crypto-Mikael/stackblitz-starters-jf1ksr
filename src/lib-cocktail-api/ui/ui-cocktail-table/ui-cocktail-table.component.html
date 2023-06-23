@@ -1,0 +1,7 @@
+<ng-container *ngIf="cocktais$ | async as cocktais">
+  <app-ui-cocktail-list [cocktais]="cocktais.drinks"></app-ui-cocktail-list>
+</ng-container>
+
+<!-- <mat-list *ngFor="let cocktail of cocktais2()">
+  <mat-list-item role="listitem">{{ cocktail.strDrink }}</mat-list-item>
+</mat-list> -->

@@ -1,4 +1,4 @@
-export interface Cocktails {
+export interface CocktailsDTO {
   idDrink: string;
   strDrink: string;
   strDrinkAlternate: any;

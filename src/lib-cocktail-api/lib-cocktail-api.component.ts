@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { FeatureCocktailFormComponent } from './features/feature-cocktail-form/feature-cocktail-form.component';
@@ -11,6 +12,7 @@ import { UiCocktailTableComponent } from './ui/ui-cocktail-table/ui-cocktail-tab
   imports: [
     UiCocktailTableComponent,
     FeatureCocktailFormComponent,
+    HttpClientModule,
     MatCardModule,
   ],
 })
