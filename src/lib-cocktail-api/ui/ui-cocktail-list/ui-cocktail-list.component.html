@@ -1,3 +1,7 @@
-<mat-list *ngFor="let cocktail of _cocktais">
-  <mat-list-item role="listitem">{{ cocktail.strDrink }}</mat-list-item>
-</mat-list>
+<div *ngFor="let cocktail of _cocktais.controls; let i = index">
+  <form [formGroup]="cocktail">
+    <input placeholder="" formControlName="nameCocktail" />
+
+    <input placeholder="" formControlName="tagsCocktails" />
+  </form>
+</div>
