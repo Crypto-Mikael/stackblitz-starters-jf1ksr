@@ -12,7 +12,7 @@ import { CocktailsDTO } from '../../models/DTOs/CocktailslDTO';
 export class UiCocktailListComponent implements OnInit {
   @Input() set cocktais(cocktais: CocktailsDTO[]) {
     console.log(cocktais);
-  };
+  }
   constructor() {}
 
   ngOnInit() {}
