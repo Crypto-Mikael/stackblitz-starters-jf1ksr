@@ -1,6 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {
+  FormControl,
+  FormGroup,
+  FormsModule,
+  ReactiveFormsModule,
+} from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatStepperModule } from '@angular/material/stepper';
 
@@ -13,6 +19,7 @@ import { MatStepperModule } from '@angular/material/stepper';
     CommonModule,
     MatStepperModule,
     ReactiveFormsModule,
+    MatFormFieldModule,
     FormsModule,
     MatInputModule,
   ],

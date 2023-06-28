@@ -1,11 +1,17 @@
-<mat-vertical-stepper [linear]="false" #stepper>
-  <mat-step [stepControl]="sabado"></mat-step>
-  <form [formGroup]="sabado">
-    <!-- <mat-form-field class="example-form-field">
-      <mat-label>Clearable input</mat-label>
-      <input matInput type="text" [(ngModel)]="value" />
-    </mat-form-field> -->
-  </form>
+<mat-stepper [linear]="true" #stepper>
+  <mat-step [stepControl]="sabado" label="Fill out your name">
+    <form [formGroup]="sabado">
+      <mat-form-field>
+        <mat-label>Cocktail</mat-label>
+        <input matInput type="text" formControlName="cocktail" />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Quantidade</mat-label>
+        <input matInput type="text" formControlName="quantidade" />
+      </mat-form-field>
+    </form>
+  </mat-step>
 
   <!-- <mat-step [stepControl]="domingo"> </mat-step> -->
-</mat-vertical-stepper>
+</mat-stepper>
