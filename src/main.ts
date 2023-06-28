@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { bootstrapApplication } from '@angular/platform-browser';
 import { LibCocktailApiComponent } from './lib-cocktail-api/lib-cocktail-api.component';
+import { provideAnimations } from '@angular/platform-browser/animations';
 
 @Component({
   selector: 'my-app',
@@ -12,4 +13,6 @@ import { LibCocktailApiComponent } from './lib-cocktail-api/lib-cocktail-api.com
 })
 export class App {}
 
-bootstrapApplication(App);
+bootstrapApplication(App, {
+  providers: [provideAnimations()],
+});

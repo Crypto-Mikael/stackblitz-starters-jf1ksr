@@ -1,5 +1,5 @@
-<mat-stepper [linear]="true" #stepper>
-  <mat-step [stepControl]="sabado" label="Fill out your name">
+<mat-stepper #stepper>
+  <mat-step [stepControl]="sabado" label="Sábado">
     <form [formGroup]="sabado">
       <mat-form-field>
         <mat-label>Cocktail</mat-label>
@@ -13,5 +13,17 @@
     </form>
   </mat-step>
 
-  <!-- <mat-step [stepControl]="domingo"> </mat-step> -->
+  <mat-step [stepControl]="domingo" label="Domingo">
+    <form [formGroup]="domingo">
+      <mat-form-field>
+        <mat-label>Cocktail</mat-label>
+        <input matInput type="text" formControlName="cocktail" />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Quantidade</mat-label>
+        <input matInput type="text" formControlName="quantidade" />
+      </mat-form-field>
+    </form>
+  </mat-step>
 </mat-stepper>

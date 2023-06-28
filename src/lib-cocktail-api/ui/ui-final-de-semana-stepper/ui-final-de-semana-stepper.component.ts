@@ -1,14 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import {
-  FormControl,
-  FormGroup,
-  FormsModule,
-  ReactiveFormsModule,
-} from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatStepperModule } from '@angular/material/stepper';
+import { MatTabsModule } from '@angular/material/tabs';
 
 @Component({
   selector: 'ui-final-de-semana-stepper',
@@ -17,15 +13,21 @@ import { MatStepperModule } from '@angular/material/stepper';
   standalone: true,
   imports: [
     CommonModule,
-    MatStepperModule,
+    MatTabsModule,
     ReactiveFormsModule,
     MatFormFieldModule,
-    FormsModule,
+    MatStepperModule,
     MatInputModule,
   ],
 })
 export class UiFinalDeSemanaStepperComponent implements OnInit {
+  
   sabado = new FormGroup({
+    cocktail: new FormControl<string | null>(null),
+    quantidade: new FormControl<number | null>(null),
+  });
+
+  domingo = new FormGroup({
     cocktail: new FormControl<string>(''),
     quantidade: new FormControl<number>(0),
   });
