@@ -1,20 +1,14 @@
 import { HttpClientModule } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
-import { FeatureCocktailFormComponent } from './features/feature-cocktail-form/feature-cocktail-form.component';
-import { UiCocktailTableComponent } from './ui/ui-cocktail-table/ui-cocktail-table.component';
+import { UiFinalDeSemanaStepperComponent } from './ui/ui-final-de-semana-stepper/ui-final-de-semana-stepper.component';
 
 @Component({
   selector: 'app-lib-cocktail-api',
   templateUrl: './lib-cocktail-api.component.html',
   styleUrls: ['./lib-cocktail-api.component.css'],
   standalone: true,
-  imports: [
-    UiCocktailTableComponent,
-    FeatureCocktailFormComponent,
-    HttpClientModule,
-    MatCardModule,
-  ],
+  imports: [UiFinalDeSemanaStepperComponent, HttpClientModule, MatCardModule],
 })
 export class LibCocktailApiComponent implements OnInit {
   constructor() {}
