@@ -1,29 +1,8 @@
 <mat-stepper #stepper>
-  <mat-step [stepControl]="sabado" label="Sábado">
-    <form [formGroup]="sabado">
-      <mat-form-field>
-        <mat-label>Cocktail</mat-label>
-        <input matInput type="text" formControlName="cocktail" />
-      </mat-form-field>
-
-      <mat-form-field>
-        <mat-label>Quantidade</mat-label>
-        <input matInput type="text" formControlName="quantidade" />
-      </mat-form-field>
-    </form>
+  <mat-step label="Sábado">
+    <feature-cocktail-form></feature-cocktail-form>
   </mat-step>
-
-  <mat-step [stepControl]="domingo" label="Domingo">
-    <form [formGroup]="domingo">
-      <mat-form-field>
-        <mat-label>Cocktail</mat-label>
-        <input matInput type="text" formControlName="cocktail" />
-      </mat-form-field>
-
-      <mat-form-field>
-        <mat-label>Quantidade</mat-label>
-        <input matInput type="text" formControlName="quantidade" />
-      </mat-form-field>
-    </form>
+  <mat-step label="Domingo">
+    <feature-cocktail-form></feature-cocktail-form>
   </mat-step>
 </mat-stepper>

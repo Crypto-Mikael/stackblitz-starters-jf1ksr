@@ -1,0 +1,21 @@
+<button
+  mat-button
+  (click)="
+    this.addCocktailOnDayFormArray(this.newCocktailFormGroup(null, null))
+  "
+>
+  Adicionar
+</button>
+<div *ngFor="let cocktailOnDay of cocktailsOnDay.controls; let i = index">
+  <form [formGroup]="cocktailOnDay">
+    <mat-form-field>
+      <mat-label>Cocktail </mat-label>
+      <input matInput formControlName="cocktailName" />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Quantidade </mat-label>
+      <input matInput type="number" formControlName="cocktailName" />
+    </mat-form-field>
+  </form>
+</div>
